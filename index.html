@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src='https://aframe.io/releases/1.0.4/aframe.min.js'></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-sky src='./assets/sky.jpg'></a-sky>
+      
+      <a-camera wasd-controls-enabled='false' position='0 8 20'></a-camera>
+
+      <!--Asset_Management-->
+      <a-assets>
+        <a-asset-item id='main-obj' src='assets/obj/tinker.obj'></a-asset-item>
+        <a-asset-item id='main-mtl' src='assets/obj/obj.mtl'></a-asset-item>
+        <a-asset-item id='main-glTF' src='assets/glTF/Table.glb'></a-asset-item>
+      </a-assets>
+
+      <!--Obj_Model-->
+      <a-entity obj-model='obj: #main.obj; mtl: #main-mtl' position='5 0 0' rotation='-90 -40 0' scale='0.1 0.1 0.1'></a-entity>
+    </a-scene>
+  </body>
+</html>
